@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marketing Research Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy:   #0a1628;
+      --gold:   #c8a96e;
+      --light:  #f7f5f0;
+      --muted:  #6b6659;
+      --border: #e2ddd4;
+      --white:  #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--light);
+      color: var(--navy);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── MAIN CONTENT WRAPPER ── */
+    .content {
+      max-width: 860px;
+      width: 100%;
+      margin: 48px auto 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      padding: 0 24px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--white);
+      border-radius: 4px;
+      border-left: 5px solid var(--gold);
+      padding: 52px 48px;
+    }
+    .hero .tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: 34px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.35;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 640px;
+    }
+    .hero p + p { margin-top: 14px; }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 40px 48px;
+    }
+    .card h2 {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .card p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* ── OFFERS TABLE ── */
+    .offers-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+    .offers-table thead tr {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .offers-table thead th {
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+    .offers-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .offers-table tbody tr:hover { background: var(--light); }
+    .offers-table tbody td {
+      padding: 14px 16px;
+      color: var(--navy);
+      vertical-align: middle;
+    }
+    .offers-table tbody td.bank {
+      font-weight: 600;
+    }
+    .offers-table tbody td a {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(200,169,110,0.3);
+    }
+    .offers-table tbody td a:hover {
+      border-bottom-color: var(--gold);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      text-align: center;
+      padding: 24px 48px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+      margin-top: auto;
+      letter-spacing: 0.5px;
+    }
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+
+    <!-- ── HERO ─────────────────────────────────────
+         EDIT: Adjust the thank-you text if needed
+         ─────────────────────────────────────────── -->
+    <div class="hero">
+      <div class="tag">Marketing Research Study</div>
+      <h1>Thank you for your interest!</h1>
+      <p>
+        You clicked on an advertisement created as part of a student research project
+        in marketing. <strong>No personal information was collected</strong> when you
+        viewed or clicked on the ad.
+      </p>
+      <p>
+        此專頁及所有廣告活動僅供學生學術研究用途。無個人信息收集。
+      </p>
+    </div>
+
+
+    <!-- ── CREDIT CARD OFFERS TABLE ─────────────────
+         EDIT: Replace each row with a real bank offer.
+               - Change [Bank / Card Name] to the real name
+               - Change [URL] to the real link
+               To ADD a row: copy any <tr>...</tr> block
+               and paste it before the closing </tbody>.
+               To REMOVE a row: delete the <tr>...</tr> block.
+         ─────────────────────────────────────────── -->
+    <div class="card">
+      <h2>Credit Card Offers for Reference</h2>
+      <p>
+        If you are looking for information on credit card offers, 
+        you may consult the following website. 
+      </p>
+      <table class="offers-table">
+        <thead>
+          <tr>
+            <th>Bank / Card</th>
+            <th style="width: 120px;">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- EDIT ↓ Row 1 -->
+          <tr>
+            <td class="bank">[Bank / Card Name]</td>
+            <td><a href="[URL]" target="_blank">Visit →</a></td>
+          </tr>
+
+          <!-- EDIT ↓ Row 2 -->
+          <tr>
+            <td class="bank">[Bank / Card Name]</td>
+            <td><a href="[URL]" target="_blank">Visit →</a></td>
+          </tr>
+
+          <!-- EDIT ↓ Row 3 -->
+          <tr>
+            <td class="bank">[Bank / Card Name]</td>
+            <td><a href="[URL]" target="_blank">Visit →</a></td>
+          </tr>
+
+          <!-- EDIT ↓ To add more rows, copy and paste this block:
+          <tr>
+            <td class="bank">[Bank / Card Name]</td>
+            <td><a href="[URL]" target="_blank">Visit →</a></td>
+          </tr>
+          -->
+
+        </tbody>
+      </table>
+    </div>
+
+  </div><!-- end .content -->
+
+
+  <!-- ── FOOTER ───────────────────────────────────
+       EDIT: Update university name and email
+       ─────────────────────────────────────────── -->
+  <footer>
+    &copy; 2026 <!-- EDIT ↓ -->The Hong Kong Polytechnic University &middot; Department of Management and Marketing &middot;
+    Research inquiries: <a href="mailto:qiaoni.yao@polyu.edu.hk">qiaoni.yao@polyu.edu.hk</a>
+  </footer>
